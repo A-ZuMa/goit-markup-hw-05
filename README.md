@@ -46,14 +46,15 @@
     codepen.io (приклади по Grid)
 
     Генерація фігур - https://bennettfeely.com/clippy/
-    Генерація анімацій -
-
-https://animista.net/play/basic/swing/swing-left-bck https://animate.style/
-Генерація градієнтів - https://cssgradient.io/ Генерація фільтрів для фотки -
-http://www.cssfiltergenerator.com/ Генерація тіней -
-https://cssbud.com/css-generator/ Генерація хвиль для фону -
-https://getwaves.io/ Генерація загрузок - https://uiverse.io/
-https://cssloaders.github.io/ https://whirl.netlify.app/ Красиві фотки для
-сайтів - https://www.pexels.com/uk-ua/ СВГ ілюстрації -
-https://designstripe.com/ https://undraw.co/illustrations Набір іконків свг -
-https://www.svgrepo.com/ 3д іконки свг - https://3dicons.co/
+    Генерація анімацій -https://animista.net/play/basic/swing/swing-left-bck 
+                        https://animate.style/
+    Генерація градієнтів - https://cssgradient.io/ 
+    Генерація фільтрів для фотки - http://www.cssfiltergenerator.com/ 
+    Генерація тіней - https://cssbud.com/css-generator/ 
+    Генерація хвиль для фону - https://getwaves.io/ 
+    Генерація загрузок - https://uiverse.io/ 
+                        https://cssloaders.github.io/ https://whirl.netlify.app/ 
+    Красиві фотки для сайтів - https://www.pexels.com/uk-ua/ 
+    СВГ ілюстрації - https://designstripe.com/ https://undraw.co/illustrations 
+    Набір іконків свг - https://www.svgrepo.com/ 
+    3д іконки свг - https://3dicons.co/
