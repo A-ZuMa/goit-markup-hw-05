@@ -54,6 +54,12 @@
 
 <!-- Animation -->
 
+    Бібліотека Animate.css https://animate.style/
+    Бібліотека AOS (Анімациї на скрол): https://michalsnik.github.io/aos/
+    Приклад анімації shake іконок: https://codepen.io/mpadalko/pen/GRWEWMZ?editors=1100
+    Приклад анімації heartbeat: https://codepen.io/mpadalko/pen/JjbErPB?editors=1100
+    Модальне вікно ****https://codepen.io/mpadalko/pen/eYreJEL
+
 <!-- Interesting webs -->
 
     codepen.io (приклади по Grid)

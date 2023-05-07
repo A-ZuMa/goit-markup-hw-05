@@ -148,10 +148,14 @@ p {
 }
 
 .nav-menu-link {
+  position: relative;
   font-weight: 500;
   padding: 24px 0;
   /* font-size: 16px; */
   color: var(--secondary-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-menu-link:hover,
@@ -161,12 +165,24 @@ p {
 
 .nav-menu-link::after {
   content: '';
+  position: absolute;
   display: block;
-  width: 40px;
+  width: 100%;
   height: 3px;
-  border-radius: 4px;
-  background-color: tomato;
+  left: 0px;
+  bottom: 0;
+  /* background: var(--presed-state-tolor); */
+  border-radius: 2px;
 }
+
+.nav-menu-link.active::after {
+  background: var(--presed-state-tolor);
+}
+
+/* .nav-menu-link:hover .nav-menu-link::after,
+.nav-menu-link:focus .nav-menu-link::after {
+  color: var(--presed-state-tolor);
+} */
 
 .contacts-list {
   display: flex;
@@ -515,7 +531,7 @@ p {
 
 /**
   |=================================
-  | Portfolio page
+  | Portfolio page #2
   |=================================
 **/
 
@@ -552,50 +568,6 @@ p {
   border: 1px solid transparent;
 }
 
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(46, 47, 66, 0.4);
-}
-
-.backdrop.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.modal {
-  position: absolute;
-  min-width: 408px;
-  min-height: 576px;
-  top: calc(50%);
-  left: calc(50%);
-  transform: translate(-50%, -50%);
-  background: #fcfcfc;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-}
-
-.close-btn {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  top: 24px;
-  right: 24px;
-  border-radius: 50%;
-  background: #e7e9fc;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.modal .icon {
-  position: absolute;
-  top: 33%;
-  left: 33%;
-}
 /**
   |============================
   | Projects section #2
@@ -633,4 +605,87 @@ p {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
+}
+
+.overlay-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.projects-link {
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 300ms;
+
+  padding: 40px 32px;
+
+  color: var(--accent-text-color);
+  background: #4d5ae5;
+  mix-blend-mode: normal;
+}
+
+.projects-item:hover .overlay {
+  transform: translateY(0);
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(46, 47, 66, 0.4);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/**
+  |============================
+  | Modal window
+  |============================
+**/
+
+.modal {
+  position: absolute;
+  min-width: 408px;
+  min-height: 576px;
+  top: calc(50%);
+  left: calc(50%);
+  transform: translate(-50%, -50%);
+  background: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+
+  border-radius: 50%;
+  background: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal-close-icon {
+  fill: #2e2f42;
 }
