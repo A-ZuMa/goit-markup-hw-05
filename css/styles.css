@@ -168,7 +168,7 @@ p {
   position: absolute;
   display: block;
   width: 100%;
-  height: 3px;
+  height: 4px;
   left: 0px;
   bottom: 0;
   /* background: var(--presed-state-tolor); */
@@ -179,10 +179,10 @@ p {
   background: var(--presed-state-tolor);
 }
 
-/* .nav-menu-link:hover .nav-menu-link::after,
+.nav-menu-link:hover .nav-menu-link::after,
 .nav-menu-link:focus .nav-menu-link::after {
   color: var(--presed-state-tolor);
-} */
+}
 
 .contacts-list {
   display: flex;
