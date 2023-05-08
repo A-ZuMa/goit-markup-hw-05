@@ -11,7 +11,7 @@
   --secondary-text-color: #2e2f42;
   --accent-text-color: #f4f4fd;
   --primary-brand-tcolor: #4d5ae5;
-  --presed-state-tolor: #404bbf;
+  --presed-state-color: #404bbf;
   --subtle-text-color: #8e8f99;
   --sucsses-text-color: #31d0aa;
   --box-background-action: #e7e9fc;
@@ -171,33 +171,32 @@ p {
   padding: 24px 0;
   /* font-size: 16px; */
   color: var(--secondary-text-color);
-  transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-menu-link:hover,
 .nav-menu-link:focus {
-  color: var(--presed-state-tolor);
+  color: var(--presed-state-color);
 }
 
 .nav-menu-link::after {
   content: '';
   position: absolute;
   display: block;
+  bottom: -1px;
   width: 100%;
   /* width: 0; */
   height: 4px;
   left: 0px;
   bottom: 0;
-  /* background: var(--presed-state-tolor); */
+  /* background: var(--presed-state-color); */
   border-radius: 2px;
   transition: 400ms;
 }
 
 /* .nav-menu-link:hover::after, */
 .nav-menu-link.active::after {
-  background: var(--presed-state-tolor);
+  background: var(--presed-state-color);
   /* width: 100%; */
 }
 
@@ -216,7 +215,7 @@ p {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-item:hover,
@@ -278,12 +277,12 @@ p {
   padding: 16px 32px;
   margin-right: auto;
   margin-left: auto;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-hero:hover,
 .button-hero:focus {
-  background-color: var(--presed-state-tolor);
+  background-color: var(--presed-state-color);
 }
 
 /**
@@ -416,12 +415,12 @@ p {
   fill: var(--accent-text-color);
   border-radius: 50%;
   background-color: var(--primary-brand-tcolor);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-icons:hover,
 .socials-icons:focus {
-  background-color: var(--presed-state-tolor);
+  background-color: var(--presed-state-color);
 }
 /**
   |============================
@@ -457,13 +456,14 @@ p {
   border-radius: 4px;
   color: var(--subtle-text-color);
   fill: currentColor;
-  transition: transform 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 1250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-icon:hover,
 .customers-icon:focus {
-  border-color: var(--presed-state-tolor);
-  color: var(--presed-state-tolor);
+  border-color: var(--presed-state-color);
+  color: var(--presed-state-color);
 }
 
 /**
@@ -544,6 +544,7 @@ p {
   fill: var(--accent-text-color);
   border-radius: 50%;
   background-color: var(--primary-brand-tcolor);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-socials-icons:hover,
@@ -553,7 +554,7 @@ p {
 
 /**
   |=================================
-  | Portfolio page #2
+  | Page#2 Portfolio section #1
   |=================================
 **/
 
@@ -578,12 +579,16 @@ p {
   padding: 12px 24px;
   border: 1px solid var(--box-background-action);
   border-radius: 4px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-btn:hover,
 .filter-btn:focus {
   color: #ffffff;
-  background-color: var(--presed-state-tolor);
+  background-color: var(--presed-state-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
@@ -592,7 +597,7 @@ p {
 
 /**
   |============================
-  | Projects section #2
+  | Portfolio section #2
   |============================
 **/
 
@@ -614,6 +619,7 @@ p {
   margin-block-end: 0;
   border: 1px solid var(--box-background-action);
   border-top: none;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-content:hover,
@@ -667,7 +673,8 @@ p {
   width: 100%;
   height: 100%;
   background: rgba(46, 47, 66, 0.4);
-  transition: visibility 250ms, opacity 250ms;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -706,16 +713,23 @@ p {
   height: 24px;
   padding: 0;
 
+  cursor: pointer;
   border-radius: 50%;
-  background: #e7e9fc;
+  fill: var(--secondary-text-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:hover,
 .modal-close-btn:focus {
-  cursor: pointer;
+  background-color: var(--presed-state-color);
+  border: none;
+  fill: #ffffff;
 }
 
-.modal-close-icon {
+/* .modal-close-icon {
   fill: #2e2f42;
-}
+} */
