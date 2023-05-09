@@ -599,9 +599,9 @@ p {
   |============================
 **/
 
-/* .projects-link {
-  transition: translayY 2150ms cubic-bezier(0.4, 0, 0.2, 1);
-} */
+.projects-link {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .projects-list {
   /* flex-basis: calc((100% - 2 * 24px) / 3); */
